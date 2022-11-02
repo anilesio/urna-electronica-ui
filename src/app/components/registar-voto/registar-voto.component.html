@@ -1,0 +1,99 @@
+<section class="box-voto espaco-p-top-0">
+    <div class="p-2">
+        <div class="row">
+            <div class="col s12 m12 l12 p-3">
+                <div class="">
+                    <div class="row">
+                        <div class="col s12 m12 l6">
+                            <h3 class="texto-uppercase negrito">Urna electrónica</h3>
+                            <h5>Escolha o seu candidato a voto</h5>
+                        </div>
+                        <div class="col s12 m12 l6">
+                            <form [formGroup]="this.formVoto" action="">
+                                <div class="col s12 m10 l10">
+                                    <input type="text" formControlName="numBilhete" name="numBilhete" id="numBilhete" class="estilo-input browser-default">
+                                </div>
+                                <div class="col s12 m2 l2">
+                                    <button type="button" (click)="this.validarBilheteVoto()" class="estilo-input waves-green">Pesquisar</button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col s12 p-3">
+                            <div class="m-2 p-3">
+                                <div class="row">
+                                    <div class="col s12 m12">
+                                        <div class="responsive-table">
+                                            <table class="responsive-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                        <th></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr *ngFor="let item of arrayCandidatos">
+                                                        <td><span class="index-candidato">{{item.id}} </span> </td>
+                                                        <td><span class="nome-partido">{{item.nomePartido}}</span> <br>
+                                                            <span>{{item.descricaoPartido}}</span> </td>
+                                                        <td><span class="nome-candidato">{{item.nomeCandidato}}</span>
+                                                        </td>
+                                                        <td><img src="{{item?.imgPartido}}" class="img-cadidato" alt="">
+                                                        </td>
+                                                        <td><img src="{{item?.imgCandidato}}" class="img-cadidato"
+                                                                alt=""></td>
+                                                        <td><a href="#modal1" data-target="modal1"  (click)="this.getPartidoInfo(item)" class="modal-trigger btn btn-large green ">Votar</a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal">
+    <div class="modal-content">
+        <div class="center">
+            <h4 class="negrito">Tem a certeza do seu voto?</h4>
+            <table>
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="index-candidato">{{InfoCandidatos.id}} </span> </td>
+                        <td><span class="nome-partido">{{InfoCandidatos.nomePartido}}</span> <br><span>{{InfoCandidatos.descricaoPartido}}</span> </td>
+                        <td><span class="nome-candidato">{{InfoCandidatos.nomeCandidato}}</span></td>
+                        <td><img src="{{InfoCandidatos?.imgPartido}}" class="img-cadidato" alt=""></td>
+                        <td><img src="{{InfoCandidatos?.imgCandidato}}" class="img-cadidato" alt=""></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="center mt-5">
+            <button class="btn btn-large modal-close  red waves-red mx-2">NÃO, CANCELAR</button>
+            <button class="btn btn-large green waves-green mx-2" (click)="this.registarVoto()" >SIM, QUERO VOTAR</button>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <!-- <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a> -->
+    </div>
+</div>

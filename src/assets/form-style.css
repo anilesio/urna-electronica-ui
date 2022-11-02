@@ -1,0 +1,129 @@
+textarea.estilo-input {
+    overflow: auto;
+    resize: vertical;
+    border: 1px solid #e0e0e0;
+    height: auto;
+    background-color: #fff;
+}
+
+.estilo-input {
+    /* line-height: 25px; */
+
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 10px !important;
+    font-size: 2em;
+    letter-spacing: 15px;
+    text-transform: uppercase;
+    color: #2c2c2c;
+    border: 2px solid #bdbdbd;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    transition: all 0.1s;
+}
+
+button.estilo-input {
+    letter-spacing: unset;
+    font-size: unset;
+    line-height: 24pt;
+}
+
+.estilo-input:hover {
+    background-color: #f9f9f9;
+}
+
+.estilo-input:focus {
+    background-color: #f9f9f9;
+    outline: none;
+    border: 2px solid #bdbdbd;
+}
+
+.estilo-input::placeholder {
+    color: #727272;
+}
+
+.estilo-input:disabled {
+    background-color: #ecebeb;
+    cursor: not-allowed;
+}
+
+button.estilo-input {
+    cursor: pointer;
+}
+
+.form-style label {
+    color: #dedede;
+}
+
+.botoes-menu {
+    margin-bottom: 0px;
+    margin-top: 30px;
+    transform: scale(0.9);
+    transition: 0.5s !important;
+    padding: 6% 1%;
+    background: rgba(221, 221, 221, 0.293);
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+}
+
+.botoes-menu span {
+    margin-bottom: 15px;
+}
+
+.botoes-menu a {
+    text-transform: uppercase;
+    transition: 0.5s !important;
+    color: #fff;
+    letter-spacing: 10px;
+}
+
+.botoes-menu:hover {
+    transform: scale(1);
+    /* background-image: linear-gradient(to bottom right, #9c27b099, #c62828c9), url('../imgs/banner/44.jpg'); */
+    background-image: linear-gradient(to bottom right, #9b27b065, #c628288f);
+    box-shadow: 0px 0px 30px 4px rgba(1, 1, 1, 0.293);
+    animation: size-box 0.6s ease-in-out infinite alternate-reverse;
+
+}
+
+
+@keyframes size-box {
+
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+.botoes-menu img {
+    transition: all 1.5s ease-in-out;
+}
+
+.botoes-menu:hover img {
+    opacity: 0.4;
+    transition: 2s;
+    animation: rotate-icon 2s ease-in-out infinite alternate;
+    /* transform: rotate(360deg); */
+}
+
+
+@keyframes rotate-icon {
+
+    0% {
+        transform: rotate(0deg);
+        ;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+
+.botoes-menu:hover a {
+    color: #fff;
+}

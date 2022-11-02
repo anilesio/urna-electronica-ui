@@ -1,0 +1,36 @@
+.img-candidato{
+    max-width: 180px !important;
+}
+
+// tr a {
+//     opacity: 0;
+// }
+
+// tr:hover a {
+//     opacity: 1;
+// }
+
+.index-candidato{
+    padding: 20px;
+    background-color: aqua;
+    margin: 10px;
+    font-weight: bold;
+
+}
+
+
+.img-cadidato{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.nome-partido {
+    font-size: 2em;
+    line-height: 20pt;
+}
+
+.nome-candidato{
+    font-weight: bold;
+    font-size: 1.3em;
+}
